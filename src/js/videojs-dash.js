@@ -184,7 +184,7 @@ class Html5DashJS {
     this.mediaPlayer_.on(MediaPlayer.events.ERROR, this.retriggerError_);
 
     this.getDuration_ = (event) => {
-      const periods = event.data.Period_asArray;
+      const periods = event.data.Period;
       const oldHasFiniteDuration = this.hasFiniteDuration_;
 
       if (event.data.mediaPresentationDuration || periods[periods.length - 1].duration) {
