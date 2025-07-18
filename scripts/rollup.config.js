@@ -8,13 +8,6 @@ const options = {
   input: 'src/js/videojs-dash.js',
   distName: 'videojs-dash',
   exportName: 'videojsDash',
-  externals(defaults) {
-    return {
-      browser: [...defaults.browser, 'dashjs'],
-      module: [...defaults.module, 'dashjs'],
-      test: [...defaults.test, 'dashjs']
-    };
-  },
   // stream and string_decoder are used by some modules
   plugins(defaults) {
     return {
