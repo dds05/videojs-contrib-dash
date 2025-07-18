@@ -105,8 +105,7 @@ class TTMLTextTrackDisplay extends Component {
    *        The function to call when `TextTrackDisplay` is ready.
    */
   constructor(player, options, ready) {
-    super(player, options);
-    this.ready(ready);
+    super(player, videojs.mergeOptions(options, {playerOptions: {}}), ready);
     const selects = player.getChild('TextTrackSettings').$$('select');
 
     for (let i = 0; i < selects.length; i++) {
